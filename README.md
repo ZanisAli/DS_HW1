@@ -1,1 +1,2 @@
-# DSH_W1
+# DS_HW1
+Distributed Systems Homework 1 
