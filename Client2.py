@@ -1,3 +1,4 @@
+#GUI help taken from stackoverflow
 import socket
 import threading
 import select
@@ -122,7 +123,7 @@ def packetchhecker():
     string1 = Checker
     return string1
 
-
+#Function to create the board numbers for the first time
 def sudogen_1(board):
     global coun2
     """
@@ -146,6 +147,7 @@ def sudogen_1(board):
 
 # To Receive the data packet from another clients via through server
 # Data packet consists of the number (ir) and the position of the number in grid (xr,xy)
+#ir = value (i) received from the server, xr = xth location, yr= yth location
 def recivepacket(board):
     PacketToRecive = packetchhecker()
     wav.PlaySound("beep.wav", wav.SND_ASYNC)
@@ -244,7 +246,7 @@ class SudokuGUI(Frame):
               fg="blue",
               font="Verdana 10 bold").pack()
         Label(tk,
-              text="Institute of Computer Science, University of Trtu",
+              text="Institute of Computer Science, University of Tartu",
               fg="blue",
               font="Verdana 10 bold").pack()
 
@@ -276,7 +278,7 @@ class SudokuGUI(Frame):
         return Counter1
 
     ##################################################################################################
-
+#mouse click event handler
     def canvas_click(self, event):
 
         print("Click! (%d,%d)" % (event.x, event.y))
@@ -291,7 +293,7 @@ class SudokuGUI(Frame):
         if self.current:
             (tx, ty) = self.current
         self.current = (x, y)
-
+#xs, xth location to send to server, ys= yth location and event.char (i) entered number to send
     def canvas_key(self, event):
         PacketToSend = ''
         global coun2
