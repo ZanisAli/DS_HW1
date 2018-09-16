@@ -1,2 +1,2 @@
-# DS_HW1
-Distributed Systems Homework 1 
+# Distributed Systems Homework1 
+Sudoku game in python using sockets
